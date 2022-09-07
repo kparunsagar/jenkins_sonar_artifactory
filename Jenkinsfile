@@ -44,7 +44,7 @@ pipeline {
                             def server = Artifactory.server 'artifactory'
                             def rtMaven = Artifactory.newMavenBuild()
                             //rtMaven.resolver server: server, releaseRepo: 'jenkins-devops', snapshotRepo: 'jenkins-devops-snapshot'
-                            rtMaven.deployer server: server, releaseRepo: 'jenkins-devops', snapshotRepo: 'jenkins-devops-snapshot'
+                            rtMaven.deployer server: server, releaseRepo: 'jenkinsdemo_repo', snapshotRepo: 'demopipeline'
                             rtMaven.tool = 'M3'
                             
                             def buildInfo = rtMaven.run pom: '$workspace/pom.xml', goals: 'clean install'
