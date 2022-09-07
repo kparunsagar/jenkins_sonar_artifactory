@@ -43,7 +43,7 @@ pipeline {
                     script{
                             def server = Artifactory.server 'artifactory'
                             def rtMaven = Artifactory.newMavenBuild()
-                            //rtMaven.resolver server: server, releaseRepo: 'jenkins-devops', snapshotRepo: 'jenkins-devops-snapshot'
+                            //rtMaven.resolver server: server, releaseRepo: 'jenkinsdemo_repo', snapshotRepo: 'demopipeline'
                             rtMaven.deployer server: server, releaseRepo: 'jenkinsdemo_repo', snapshotRepo: 'demopipeline'
                             rtMaven.tool = 'maven'
                             
