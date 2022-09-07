@@ -5,7 +5,7 @@ pipeline {
         stages {
             stage('Source') {
                 steps {
-                    git url: 'https://github.com/shanthshivam/sample-java-maven.git'
+                    git url: 'https://github.com/kparunsagar/jenkins_sonar_artifactory.git'
                 }
             }
             stage('Build') {
